@@ -19,5 +19,6 @@
 //= require ember-auth
 //= require_self
 //= require base_app
+//= require auth
 BaseApp = Ember.Application.create();
 //= require_tree .

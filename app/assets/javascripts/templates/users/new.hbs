@@ -1,0 +1,15 @@
+<div class="session_form">
+	<legend>Sign Up</legend>
+	<form {{action save content on="submit"}}>
+			<label>Name</label>
+			{{view Ember.TextField valueBinding='name' name='name'}}
+			<label>Email</label>
+			{{view Ember.TextField valueBinding='email' name='email' type="email"}}
+			<label>Password</label>
+			{{view Ember.TextField type="password" valueBinding='password' name='password'}}
+			<label>Password confirmation</label>
+			{{view Ember.TextField type="password" valueBinding='password_confirmation' name='password_confirmation'}}
+			<br>
+			<button class='btn' type="submit">Sign Up</button>
+	</form>
+</div>

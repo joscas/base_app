@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :email
   
   def id
     object._id

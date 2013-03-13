@@ -5,5 +5,7 @@ Auth.Config.reopen({
   idKey: 'user_id',
   rememberMe: true,
   rememberTokenKey: 'remember_token',
-  rememberPeriod: 7
+  rememberPeriod: 7,
+  signInRoute: 'sign_in',
+  signInRedirectFallbackRoute: 'home'
 });

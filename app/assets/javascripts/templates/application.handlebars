@@ -1,3 +1,26 @@
-{{#linkTo "sign_in"}}Sign In{{/linkTo}}
+<div class="navbar navbar-static-top">
+	<div class="navbar-inner">
+		<ul class='nav pull-left'>
+			<li {{bindAttr class="activeHome:active"}}>{{#linkTo "home"}}Home{{/linkTo}}</li>
+			<li class="divider-vertical"></li>
+			{{#if Auth.authToken}}
+				<li {{bindAttr class="activeUsers:active"}}>{{#linkTo "users.index"}}Users{{/linkTo}}</li>
+				<li class="divider-vertical"></li>
+			{{/if}}
+		</ul>
+		<ul class='nav pull-right'>
+			{{#if Auth.authToken}}
+				<li class="disabled"><a href="#">{{controllers.sign_in.email}}</a></li>
+				<li class="divider-vertical"></li>
+		  	<li {{bindAttr class="activeSignOut:active"}}><a  href="#" {{action "signOut"}}>Sign Out</a></li>
+			{{else}}
+				<li class="divider-vertical"></li>
+		  	<li {{bindAttr class="activeSignIn:active"}}>{{#linkTo "sign_in"}}Login{{/linkTo}}</li>
+				<li class="divider-vertical"></li>
+		  	<li {{bindAttr class="activeSignUp:active"}}>{{#linkTo "users.new"}}Sign Up{{/linkTo}}</li>
+			{{/if}}
+		</ul>
+	</div>
+</div>
 
 {{outlet}}
