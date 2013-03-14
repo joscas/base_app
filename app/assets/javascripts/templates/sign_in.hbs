@@ -1,6 +1,9 @@
 <div class="session_form">
-	{{#if loginState.error}}
-	  <p>Unauthorized!</p>
+	{{#if loginError}}
+		<div class="alert alert-error">
+		  <button type="button" class="close" data-dismiss="alert" {{action "dismissError"}}>&times;</button>
+		  <strong>Unauthorized!</strong> Incorrect email or password.
+		</div>
 	{{/if}}
 	<form>
 		<fieldset>

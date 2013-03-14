@@ -2,26 +2,21 @@ BaseApp.SignInController = Auth.SignInController.extend({
   email: null,
   password: null,
   loginError: false,
-  //loginState: {
-  //  error: false
-  //},
   signIn: function() {
     this.registerRedirect();
-    console.log(this);
     Auth.signIn({
       email: this.get('email'),
       password: this.get('password')
     });
-    //var outer = this.get('loginState');
-    var f = function() {
-      //this.set('loginError', true);
-      //this.set("loginState.error", true);
-      //BaseApp.SignInController.set('loginError', true);
-      console.log("This is a signin error");
-      //console.log(this.get('loginError'));
-      console.log(this);
-      console.log(Auth.get('jqxhr'));
-    };
-    Auth.on('signInError', f);
+    var self = this;
+    Auth.on('signInError', function() {
+      self.set('loginError', true);
+    });
+    Auth.on('signInSuccess', function() {
+      self.set('loginError', false);
+    });
+  },
+  dismissError: function() {
+    this.set('loginError', false);
   }
 });
