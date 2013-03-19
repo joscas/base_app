@@ -2,6 +2,7 @@ BaseApp.SignInController = Auth.SignInController.extend({
   email: null,
   password: null,
   loginError: false,
+  loginResponse: "",
   signIn: function() {
     this.registerRedirect();
     Auth.signIn({
@@ -11,6 +12,7 @@ BaseApp.SignInController = Auth.SignInController.extend({
     var self = this;
     Auth.on('signInError', function() {
       self.set('loginError', true);
+      self.set('loginResponse', Auth.get('jqxhr').statusText);
     });
     Auth.on('signInSuccess', function() {
       self.set('loginError', false);

@@ -1,6 +1,12 @@
 <div class="session_form">
+	{{#if signupError}}
+		<div class="alert alert-error">
+		  <button type="button" class="close" data-dismiss="alert" {{action "dismissError"}}>&times;</button>
+		  {{validationErrors}}}
+		</div>
+	{{/if}}
 	<legend>Sign Up</legend>
-	<form {{action save content on="submit"}}>
+	<form>
 			<label>Name</label>
 			{{view Ember.TextField valueBinding='name' name='name'}}
 			<label>Email</label>
@@ -10,6 +16,6 @@
 			<label>Password confirmation</label>
 			{{view Ember.TextField type="password" valueBinding='password_confirmation' name='password_confirmation'}}
 			<br>
-			<button class='btn' type="submit">Sign Up</button>
+			<button {{action "save"}} class='btn'>Sign Up</button>
 	</form>
 </div>

@@ -2,7 +2,7 @@
 	{{#if loginError}}
 		<div class="alert alert-error">
 		  <button type="button" class="close" data-dismiss="alert" {{action "dismissError"}}>&times;</button>
-		  <strong>Unauthorized!</strong> Incorrect email or password.
+		  {{loginResponse}}}
 		</div>
 	{{/if}}
 	<form>

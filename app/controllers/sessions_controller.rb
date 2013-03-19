@@ -1,8 +1,8 @@
 class SessionsController < Devise::SessionsController
+
   def create
     return missing_params unless params[:email] && params[:password]
-
-    build_resource
+    
     resource = resource_from_credentials
     return invalid_credentials unless resource
 
