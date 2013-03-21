@@ -17,7 +17,8 @@ class SessionsController < Devise::SessionsController
   def destroy
     return missing_params unless params[:auth_token]
 
-    resource = resource_class.find_by_authentication_token(params[:auth_token])
+    resource = resource_class.find_by(authentication_token: params[:auth_token])
+    puts resource.inspect
     return invalid_credentials unless resource
 
     resource.reset_authentication_token!
