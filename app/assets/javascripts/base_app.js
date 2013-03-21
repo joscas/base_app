@@ -6,4 +6,5 @@
 //= require_tree ./templates
 //= require ./router
 //= require_tree ./routes
+//= require auth
 //= require_self

@@ -5,9 +5,8 @@ BaseApp.Router.reopen({
 BaseApp.Router.map(function() {
   this.route('home');
   this.route('sign_in');
-  //this.route('sign_up');
   this.resource('users', function() {
-    this.route('show');
+    this.route('edit');
     this.route('new');
   });
 });
@@ -31,11 +30,15 @@ BaseApp.SignInRoute = Ember.Route.extend({
   }
 });
 
-//BaseApp.SignUpRoute = Ember.Route.extend({
-//  setupController: function(controller, model) {
-//    this.controllerFor('application').set('currentRoute', 'sign_up');
-//  }
-//});
+BaseApp.UsersEditRoute = Ember.Route.extend({
+  model: function() {
+    return BaseApp.User.find(Auth.currentUserId);
+  },
+  setupController: function(controller, model) {
+    controller.set('content', model);
+    this.controllerFor('application').set('currentRoute', 'edit_user');
+  }
+});
 
 BaseApp.UsersNewRoute = Ember.Route.extend({
   model: function() {

@@ -1,5 +1,5 @@
 BaseApp.ApplicationController = Ember.Controller.extend({
-  needs: ["sign_in","users_new"],
+  needs: ["users_edit"],
   
   signOut: function() {
     return Auth.signOut();

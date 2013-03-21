@@ -1,4 +1,6 @@
 BaseApp.SignInController = Auth.SignInController.extend({
+  needs: ["users_edit"],
+  
   email: null,
   password: null,
   loginError: false,
@@ -16,6 +18,7 @@ BaseApp.SignInController = Auth.SignInController.extend({
     });
     Auth.on('signInSuccess', function() {
       self.set('loginError', false);
+      self.set('controllers.users_edit.content', BaseApp.User.find(Auth.currentUserId));
     });
   },
   dismissError: function() {
