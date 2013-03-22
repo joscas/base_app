@@ -30,7 +30,7 @@ BaseApp.SignInRoute = Ember.Route.extend({
   }
 });
 
-BaseApp.UsersEditRoute = Ember.Route.extend({
+BaseApp.UsersEditRoute = Auth.Route.extend({
   model: function() {
     return BaseApp.User.find(Auth.currentUserId);
   },
@@ -59,11 +59,11 @@ BaseApp.UsersNewRoute = Ember.Route.extend({
   }
 });
 
-BaseApp.UsersIndexRoute = Ember.Route.extend({
+BaseApp.UsersIndexRoute = Auth.Route.extend({
   model: function() {
     return BaseApp.User.find();
   },
-  setupController: function(controller, model) {
+  setupController: function(controller,model) {
     controller.set('users', model);
     return this.controllerFor('application').set('currentRoute', 'users');
   }
