@@ -2,7 +2,12 @@ BaseApp.ApplicationController = Ember.Controller.extend({
   needs: ["users_edit"],
   
   signOut: function() {
-    return Auth.signOut();
+    Auth.signOut();
+    var self=this;
+    Auth.on('signOutSuccess', function() {
+      self.transitionToRoute('home');
+      //location.reload();
+    });
   },
   
   activeHome: (function() {
