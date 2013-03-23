@@ -1,9 +1,16 @@
-<div id='userlist'>
-	{{#each controller}}
-	  <tr>
-	    <td>{{email}}</td>
-	    <td><a href='#'>{{name}}</a></td>
-			<br>
-	  </tr>
-	{{/each}}
-</div>
+ <table class="table" id='userlist'>
+	<thead>
+	    <tr>
+	      <th>email</th>
+	      <th>name</th>
+	    </tr>
+	  </thead>
+	<tbody>
+		{{#each user in controller}}
+		<tr>
+	    <td>{{user.email}}</td>
+	    <td>{{#linkTo 'users.edit' user}}{{user.name}}{{/linkTo}}</td>
+  	</tr>
+		{{/each}}
+	</tbody>
+</table>

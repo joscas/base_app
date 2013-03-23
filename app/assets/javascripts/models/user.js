@@ -6,10 +6,6 @@ BaseApp.User = DS.Model.extend({
   signupError: false,
   validationErrors: {},
   
-  //didCreate: function() {
-  //  alert('Success!');
-  //  return Em.transitionTo('home');
-  //},
   becameError: function() {
     this.set('signupError', true);
     this.set('validationErrors', 'Error.');

@@ -6,7 +6,9 @@ BaseApp.Router.map(function() {
   this.route('home');
   this.route('sign_in');
   this.resource('users', function() {
-    this.route('edit');
+    this.route('edit', {
+      path: '/:user_id'
+    });
     this.route('new');
   });
 });

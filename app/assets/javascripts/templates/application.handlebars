@@ -10,7 +10,7 @@
 		</ul>
 		<ul class='nav pull-right'>
 			{{#if Auth.authToken}}
-				<li class="disabled">{{#linkTo "users.edit"}}{{controllers.users_edit.name}}{{/linkTo}}</li>
+				<li class="disabled">{{#linkTo "users.edit" Auth.loggedUser}}{{Auth.loggedUser.name}}{{/linkTo}}</li>
 				<li class="divider-vertical"></li>
 		  	<li {{bindAttr class="activeSignOut:active"}}><a  href="#" {{action "signOut"}}>Sign Out</a></li>
 			{{else}}

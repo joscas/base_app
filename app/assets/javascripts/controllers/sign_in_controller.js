@@ -17,8 +17,9 @@ BaseApp.SignInController = Auth.SignInController.extend({
       self.set('loginResponse', Auth.get('jqxhr').statusText);
     });
     Auth.on('signInSuccess', function() {
+      Auth.loggedUser = BaseApp.User.find(Auth.currentUserId);
       self.set('loginError', false);
-      self.set('controllers.users_edit.content', BaseApp.User.find(Auth.currentUserId));
+      //self.set('controllers.users_edit.content', BaseApp.User.find(Auth.currentUserId));
     });
   },
   dismissError: function() {
