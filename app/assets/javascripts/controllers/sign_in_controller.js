@@ -3,13 +3,15 @@ BaseApp.SignInController = Auth.SignInController.extend({
   
   email: null,
   password: null,
+  remember: false,
   loginError: false,
   loginResponse: "",
   signIn: function() {
     this.registerRedirect();
     Auth.signIn({
       email: this.get('email'),
-      password: this.get('password')
+      password: this.get('password'),
+      remember: this.get('remember')
     });
     var self = this;
     Auth.on('signInError', function() {
@@ -19,7 +21,6 @@ BaseApp.SignInController = Auth.SignInController.extend({
     Auth.on('signInSuccess', function() {
       Auth.loggedUser = BaseApp.User.find(Auth.currentUserId);
       self.set('loginError', false);
-      //self.set('controllers.users_edit.content', BaseApp.User.find(Auth.currentUserId));
     });
   },
   dismissError: function() {

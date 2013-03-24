@@ -12,6 +12,7 @@
 	    {{view Ember.TextField type="email" valueBinding="email"}}
 	    <label>Password</label>
 	    {{view Ember.TextField type="password" valueBinding="password"}}
+			<label class="checkbox">Remember me {{view Ember.Checkbox type="checkbox" checkedBinding="remember"}}</label>
 			<br>
 	    <button {{action "signIn"}} class="btn">Log In</button>
 		</fieldset>
