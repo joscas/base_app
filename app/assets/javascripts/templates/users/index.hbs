@@ -9,7 +9,7 @@
 		{{#each user in controller}}
 		<tr>
 	    <td>{{user.email}}</td>
-	    <td>{{#linkTo 'users.edit' user}}{{user.name}}{{/linkTo}}</td>
+	    <td>{{user.name}}</td>
   	</tr>
 		{{/each}}
 	</tbody>

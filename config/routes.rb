@@ -1,5 +1,9 @@
 BaseApp::Application.routes.draw do
   devise_for :users, controllers: {sessions: 'sessions', registrations: 'registrations'}
+  devise_scope :user do
+    put "/users/:id", :to => "registrations#update"
+  end
+  
   resources :users, only: [:index, :show]
   root :to => 'application#index'
   match "/*path" => "application#index"

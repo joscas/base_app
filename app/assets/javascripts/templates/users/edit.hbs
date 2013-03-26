@@ -1,8 +1,34 @@
-<h1>{{name}}</h1>
-<div>
-  <q>{{email}}</q>
+<div class="session_form">
+	{{#if validationError}}
+		<div class="alert alert-error">
+		  <button type="button" class="close" data-dismiss="alert" {{action "dismissError"}}>&times;</button>
+		  {{validationErrors}}}
+		</div>
+	{{/if}}
+	<legend>User</legend>
+	<form>
+			<label>
+				Name<br>
+				{{view Ember.TextField valueBinding='name' name='name'}}
+			</label>
+			<label>
+				Email<br>
+				{{view Ember.TextField valueBinding='email' name='email' type="email"}}
+			</label>
+			<label>
+				Current password<br>
+				{{view Ember.TextField type="password" valueBinding='current_password' name='current_password'}}
+			</label>
+			<label>
+				New password<br>
+				{{view Ember.TextField type="password" valueBinding='password' name='password'}}
+			</label>
+			<label>
+				New password confirmation<br>
+				{{view Ember.TextField type="password" valueBinding='password_confirmation' name='password_confirmation'}}
+			</label>
+			<br>
+			<button {{action "save"}} class='btn'>Save</button>
+			<button type="button" class="btn" {{action "cancel"}}>Cancel</button>
+	</form>
 </div>
-
-<div class='page-header'></div>
-
-{{#linkTo 'home' class='btn'}}Back{{/linkTo}}

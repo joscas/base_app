@@ -3,6 +3,7 @@ BaseApp.ApplicationView = Ember.View.extend({
     Auth.Module.RememberMe.recall();
     Auth.on('signInSuccess', function() {
       Auth.loggedUser = BaseApp.User.find(Auth.currentUserId);
+      BaseApp.Router.router.transitionTo('home');
     });
   }
 });

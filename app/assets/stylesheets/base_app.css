@@ -2,9 +2,10 @@ body {
 }
 
 .session_form {
-  position:absolute;
-  top:100px;
-  left:100px;
+  position:relative;
+  top:50px;
+  left:70px;
+  width:400px;
 }
 
 #userlist {

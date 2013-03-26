@@ -1,5 +1,5 @@
 <div class="session_form">
-	{{#if signupError}}
+	{{#if validationError}}
 		<div class="alert alert-error">
 		  <button type="button" class="close" data-dismiss="alert" {{action "dismissError"}}>&times;</button>
 		  {{validationErrors}}}
@@ -7,15 +7,24 @@
 	{{/if}}
 	<legend>Sign Up</legend>
 	<form>
-			<label>Name</label>
-			{{view Ember.TextField valueBinding='name' name='name'}}
-			<label>Email</label>
-			{{view Ember.TextField valueBinding='email' name='email' type="email"}}
-			<label>Password</label>
-			{{view Ember.TextField type="password" valueBinding='password' name='password'}}
-			<label>Password confirmation</label>
-			{{view Ember.TextField type="password" valueBinding='password_confirmation' name='password_confirmation'}}
+			<label>
+				Name<br>
+				{{view Ember.TextField valueBinding='name' name='name' disabledBinding='validationError'}}
+			</label>
+			<label>
+				Email<br>
+				{{view Ember.TextField valueBinding='email' name='email' type="email" disabledBinding='validationError'}}
+			</label>
+			<label>
+				Password<br>
+				{{view Ember.TextField type="password" valueBinding='password' name='password' disabledBinding='validationError'}}
+			</label>
+			<label>
+				Password confirmation<br>
+				{{view Ember.TextField type="password" valueBinding='password_confirmation' name='password_confirmation' disabledBinding='validationError'}}
+			</label>
 			<br>
-			<button {{action "save"}} class='btn'>Sign Up</button>
+			<button {{action "save"}} {{bindAttr class=":btn validationError:disabled"}}>Sign Up</button>
+			<button type="button" class="btn" {{action "cancel"}}>Cancel</button>
 	</form>
 </div>

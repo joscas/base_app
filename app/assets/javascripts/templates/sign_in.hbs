@@ -8,13 +8,17 @@
 	<form>
 		<fieldset>
 			<legend>Log In</legend>
-	    <label>Email</label>
-	    {{view Ember.TextField type="email" valueBinding="email"}}
-	    <label>Password</label>
-	    {{view Ember.TextField type="password" valueBinding="password"}}
+	    <label>
+				Email<br>
+	    	{{view Ember.TextField type="email" valueBinding="email"}}
+			</label>
+	    <label>
+				Password<br>
+	    	{{view Ember.TextField type="password" valueBinding="password"}}
+			</label>
 			<label class="checkbox">Remember me {{view Ember.Checkbox type="checkbox" checkedBinding="remember"}}</label>
 			<br>
-	    <button {{action "signIn"}} class="btn">Log In</button>
+	    <button {{action "signIn"}} class="btn" type="submit">Log In</button>
 		</fieldset>
 	</form>
 </div>
