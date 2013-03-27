@@ -27,20 +27,34 @@ BaseApp.ApplicationController = Ember.Controller.extend({
   }).property('currentRoute'),
   
   backupUserForm: function(content){
-    // This can probably be improved to backup properties not previously known
-    return backup = {
-      name: content.get("name"),
-      email: content.get("email"),
-      current_password: content.get("current_password"),
-      password: content.get("password"),
-      password_confirmation: content.get("password_confirmation")
+    var backup = {}
+    var props = this.getEmberProps("User");
+    for (var i=0;i<props.length;i++) {
+      backup[props[i]] = content.get(props[i]);
     };
+    return backup;
   },
   
   fillForm: function(content, backup){
     for (prop in backup) {
       content.set(prop,backup[prop]);
     }
+  },
+  
+  getEmberProps: function(model) {
+    var props = [];
+    var obj_name = "BaseApp." + model +".prototype";
+    obj = eval(obj_name);
+    for (var m in obj) {
+      try {
+        obj.get(m);
+      } catch (err) {
+        if (typeof m == "string" && m != "_reference" && m != "data") {
+          props.push(m);
+        }
+      }
+    }
+    return props;
   }
 
 });

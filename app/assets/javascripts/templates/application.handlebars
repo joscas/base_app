@@ -4,8 +4,10 @@
 			<li {{bindAttr class="activeHome:active"}}>{{#linkTo "home"}}Home{{/linkTo}}</li>
 			<li class="divider-vertical"></li>
 			{{#if Auth.authToken}}
-				<li {{bindAttr class="activeUsers:active"}}>{{#linkTo "users.index"}}Users{{/linkTo}}</li>
-				<li class="divider-vertical"></li>
+				{{#if Auth.loggedUser.admin}}
+					<li {{bindAttr class="activeUsers:active"}}>{{#linkTo "users.index"}}Users{{/linkTo}}</li>
+					<li class="divider-vertical"></li>
+				{{/if}}
 			{{/if}}
 		</ul>
 		<ul class='nav pull-right'>
@@ -15,7 +17,7 @@
 		  	<li {{bindAttr class="activeSignOut:active"}}><a  href="#" {{action "signOut"}}>Sign Out</a></li>
 			{{else}}
 				<li class="divider-vertical"></li>
-		  	<li {{bindAttr class="activeSignIn:active"}}>{{#linkTo "sign_in"}}Login{{/linkTo}}</li>
+		  	<li {{bindAttr class="activeSignIn:active"}}>{{#linkTo "sign_in"}}Sign In{{/linkTo}}</li>
 				<li class="divider-vertical"></li>
 		  	<li {{bindAttr class="activeSignUp:active"}}>{{#linkTo "users.new"}}Sign Up{{/linkTo}}</li>
 			{{/if}}

@@ -4,6 +4,7 @@ BaseApp.User = DS.Model.extend({
   current_password: DS.attr('string'),
   password: DS.attr('string'),
   password_confirmation: DS.attr('string'),
+  admin: DS.attr('boolean'),
   validationError: false,
   validationErrors: {},
   updated: false,

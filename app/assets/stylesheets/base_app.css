@@ -3,7 +3,7 @@ body {
 
 .session_form {
   position:relative;
-  top:50px;
+  top:70px;
   left:70px;
   width:400px;
 }
@@ -13,4 +13,14 @@ body {
   left:50px;
   top:20px;
   width:500px;
+}
+
+#oauth_providers {
+  position:relative;
+  top: 40px;
+  left: 70px;
+}
+
+#logo_signin {
+  width:200px;
 }

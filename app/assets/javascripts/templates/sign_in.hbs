@@ -1,3 +1,4 @@
+{{partial oauth}}
 <div class="session_form">
 	{{#if loginError}}
 		<div class="alert alert-error">
@@ -7,7 +8,7 @@
 	{{/if}}
 	<form>
 		<fieldset>
-			<legend>Log In</legend>
+			<legend>Sign In</legend>
 	    <label>
 				Email<br>
 	    	{{view Ember.TextField type="email" valueBinding="email"}}
@@ -18,7 +19,7 @@
 			</label>
 			<label class="checkbox">Remember me {{view Ember.Checkbox type="checkbox" checkedBinding="remember"}}</label>
 			<br>
-	    <button {{action "signIn"}} class="btn" type="submit">Log In</button>
+	    <button {{action "signIn"}} class="btn" type="submit">Sign In</button>
 		</fieldset>
 	</form>
 </div>
