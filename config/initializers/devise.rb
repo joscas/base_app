@@ -219,7 +219,7 @@ Devise.setup do |config|
   require "omniauth-google-oauth2"
   config.omniauth :google_oauth2, ENV['GOOGLE_OAUTH_CLIENT_ID'], ENV['GOOGLE_OAUTH_CLIENT_SECRET'], { access_type: "offline", approval_prompt: "" }
   require "omniauth-linkedin"
-  config.omniauth :linkedin, "i8p1pclecr2z", "I4eEAiBbn5c9o4WD"  
+  config.omniauth :linkedin, ENV['LINKEDIN_API_KEY'], ENV['LINKEDIN_SECRET_KEY']
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
