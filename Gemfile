@@ -48,3 +48,4 @@ gem 'active_model_serializers', '~> 0.6.0'
 gem 'inherited_resources'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-linkedin'
+gem "figaro"

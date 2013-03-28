@@ -69,6 +69,8 @@ GEM
       multi_json (~> 1.0)
     faraday (0.8.7)
       multipart-post (~> 1.1)
+    figaro (0.5.3)
+      rails (~> 3.0)
     handlebars-source (1.0.0.rc.3)
     has_scope (0.5.1)
     hashie (1.2.0)
@@ -193,6 +195,7 @@ DEPENDENCIES
   devise
   ember-auth-rails
   ember-rails
+  figaro
   inherited_resources
   jquery-rails
   mongoid
