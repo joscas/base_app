@@ -1,14 +1,27 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 	def google_oauth2
-	    # You need to implement the method below in your model (e.g. app/models/user.rb)
-	    @user = User.find_for_google_oauth2(request.env["omniauth.auth"], current_user)
-
-	    if @user.persisted?
-	      flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Google"
-	      sign_in_and_redirect @user, :event => :authentication
-	    else
-	      session["devise.google_data"] = request.env["omniauth.auth"]
-	      redirect_to new_user_registration_url
-	    end
+	  generic_provider
 	end
+	
+	def linkedin
+	  #puts request.env["omniauth.auth"]
+	  generic_provider
+  end
+  
+  def generic_provider
+    @user = User.find_for_generic_provider(request.env["omniauth.auth"], current_user)
+
+    if @user.persisted?
+      @user.ensure_authentication_token!
+      @user.remember_me!
+	    redirect_to "/callback/#{remember_token(@user)}" 
+    else
+      redirect_to "/err_500"
+    end
+  end
+	
+	def remember_token(resource)
+    data = resource_class.serialize_into_cookie(resource)
+    "#{data.first.first}-#{data.last}"
+  end
 end
