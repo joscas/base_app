@@ -83,7 +83,8 @@ production:
   sessions:
     default:
       database: base_app
-      uri: <%= ENV['MONGOHQ_URL'] %>
+      hosts:
+        - <%= ENV['MONGOHQ_URL'] %>
       options:
         skip_version_check: true
         safe: true
