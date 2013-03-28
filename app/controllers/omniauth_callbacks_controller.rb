@@ -4,11 +4,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 	end
 	
 	def linkedin
-	  #puts request.env["omniauth.auth"]
 	  generic_provider
   end
   
   def generic_provider
+    #puts request.env["omniauth.auth"]
     @user = User.find_for_generic_provider(request.env["omniauth.auth"], current_user)
 
     if @user.persisted?
