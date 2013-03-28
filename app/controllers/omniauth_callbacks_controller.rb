@@ -14,7 +14,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if @user.persisted?
       @user.ensure_authentication_token!
       @user.remember_me!
-	    redirect_to "/callback/#{remember_token(@user)}" 
+      url_token=remember_token(@user).html_safe
+	    redirect_to "/callback/#{url_token}" 
     else
       redirect_to "/err_500"
     end
