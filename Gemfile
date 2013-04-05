@@ -37,7 +37,10 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-gem 'coveralls', require: false
+group :development, :test do
+  gem 'coveralls', require: false
+end
+
 gem 'thin'
 gem 'mongoid'
 gem 'ember-rails'
