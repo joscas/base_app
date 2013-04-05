@@ -1,0 +1,13 @@
+#HELLO: world
+
+development:
+  GOOGLE_OAUTH_CLIENT_ID:               '909013928898.apps.googleusercontent.com'
+  GOOGLE_OAUTH_CLIENT_SECRET:	          'RyqFajM7qowZsiN6xKt8GE1D'
+  LINKEDIN_API_KEY:                     'i8p1pclecr2z'
+  LINKEDIN_SECRET_KEY:                  'I4eEAiBbn5c9o4WD'
+  
+production:
+  GOOGLE_OAUTH_CLIENT_ID:               '909013928898-naibu96074doi731fj99t10hbjt76o0s.apps.googleusercontent.com'
+  GOOGLE_OAUTH_CLIENT_SECRET:	          'Ccb9NuORtD7qC4nQS63Pv65Y'
+  LINKEDIN_API_KEY:                     'rii01ftdfzwv'
+  LINKEDIN_SECRET_KEY:                  'JMNDDs7r3qDinm0u'
