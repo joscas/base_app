@@ -37,6 +37,7 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+gem 'coveralls', require: false
 gem 'thin'
 gem 'mongoid'
 gem 'ember-rails'
