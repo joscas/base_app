@@ -43,6 +43,8 @@ end
 
 gem 'thin'
 gem 'mongoid'
+gem 'handlebars-source', '1.0.0.rc3'
+#gem 'ember-rails', '~> 0.11.1'
 gem 'ember-rails'
 gem 'ember-auth-rails'
 gem 'therubyracer'
