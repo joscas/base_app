@@ -1,4 +1,4 @@
-BaseApp.SignInController = Auth.SignInController.extend({
+BaseApp.SignInController = Em.ObjectController.extend(Auth.SignInController, {
   needs: ["users_edit"],
   
   email: null,

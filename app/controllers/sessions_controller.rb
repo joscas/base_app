@@ -42,15 +42,6 @@ class SessionsController < Devise::SessionsController
     warden.custom_failure!
     render json: {}, status: 401
   end
-
-  def resource_from_credentials
-    data = { email: params[:email] }
-    if res = resource_class.find_for_database_authentication(data)
-      if res.valid_password?(params[:password])
-        res
-      end
-    end
-  end
   
   def remember_token(resource)
     data = resource_class.serialize_into_cookie(resource)
@@ -60,6 +51,16 @@ class SessionsController < Devise::SessionsController
   def resource_from_remember_token
     token = params[:remember_token]
     id, identifier = token.split('-')
-    resource_class.serialize_from_cookie(id, identifier)
+    User.serialize_from_cookie(id, identifier)
   end
+  
+  def resource_from_credentials
+    data = { email: params[:email] }
+    if res = User.find_for_database_authentication(data)
+      if res.valid_password?(params[:password])
+        res
+      end
+    end
+  end
+
 end

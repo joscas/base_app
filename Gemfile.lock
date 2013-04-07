@@ -83,14 +83,10 @@ GEM
       bundler (~> 1.0)
       rails (>= 3, < 5)
     handlebars-source (1.0.0.rc.3)
-    has_scope (0.5.1)
     hashie (1.2.0)
     hike (1.2.1)
     httpauth (0.2.0)
     i18n (0.6.1)
-    inherited_resources (1.4.0)
-      has_scope (~> 0.5.0)
-      responders (~> 0.9)
     journey (1.0.4)
     jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
@@ -162,8 +158,6 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.4)
-    responders (0.9.3)
-      railties (~> 3.1)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     sass (3.2.7)
@@ -215,7 +209,6 @@ DEPENDENCIES
   ember-rails
   figaro
   handlebars-source (= 1.0.0.rc3)
-  inherited_resources
   jquery-rails
   mongoid
   omniauth-google-oauth2
