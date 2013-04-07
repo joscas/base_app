@@ -37,7 +37,15 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+group :test do  
+  gem 'fabrication'
+  gem 'shoulda'
+#  gem "capybara"
+#  gem "guard-rspec"
+end
+
 group :development, :test do
+  gem "rspec-rails"
   gem 'coveralls', require: false
 end
 
