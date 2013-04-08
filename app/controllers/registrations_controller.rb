@@ -14,6 +14,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
   
   def update
+    puts "!!!!!!!!!!!!!!!!!!!!!!! GONE TO UPDATE !!!!!!!!!!!!!!!!!!!!!!!"
     resource = resource_class.find(params[:id])
     return invalid_credentials unless (resource[:authentication_token] == params[:auth_token]) 
 

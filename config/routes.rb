@@ -5,7 +5,7 @@
 # end
 
 BaseApp::Application.routes.draw do
-  devise_for :users, controllers: {sessions: 'sessions', registrations: 'registrations', omniauth_callbacks: "omniauth_callbacks"}
+  devise_for :users, controllers: {sessions: 'sessions', registrations: 'registrations', omniauth_callbacks: 'omniauth_callbacks'}
   devise_scope :user do
     put "/users/:id", :to => "registrations#update"
   end
