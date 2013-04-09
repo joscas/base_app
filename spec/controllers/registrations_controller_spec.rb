@@ -25,7 +25,7 @@ describe RegistrationsController do
   end
 
   describe 'PUT update' do
-    context 'Invalid credentials' do
+    context 'Invalid credentials no auth token' do
       before do
         user = Fabricate(:user)
         user.ensure_authentication_token!
@@ -82,14 +82,14 @@ describe RegistrationsController do
         up_user.should == expect_user
       end
     end
-    context 'Invalid credentials' do
+    context 'Invalid credentials wrong auth token' do
       before do
         @user = Fabricate(:user)
         @user.ensure_authentication_token!
         xhr :put,
             :update,
             :id => @user.id,
-            :auth_token => "qM42ynXmGRrV3tiBL9k7", # Invalid token
+            :auth_token => "ZZZZynXmGRrV3tiHL9kx", # Invalid token
             :user => {:current_password => @user.password,
                       :name => "New Name"}
       end
