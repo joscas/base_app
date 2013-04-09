@@ -1,4 +1,3 @@
-# coding: utf-8
 require 'spec_helper'
 
 describe RegistrationsController do
@@ -36,7 +35,7 @@ describe RegistrationsController do
         response.response_code.should == 401
       end
     end
-    context 'Update with password' do
+    context 'Update password' do
       before do
         @user = Fabricate(:user)
         @user.ensure_authentication_token!
@@ -60,7 +59,7 @@ describe RegistrationsController do
         up_user.should == expect_user
       end
     end
-    context 'Update without password' do
+    context 'Update fields' do
       before do
         @user = Fabricate(:user)
         @user.ensure_authentication_token!
@@ -81,6 +80,36 @@ describe RegistrationsController do
                            'email' => @user.email,
                            'admin' => @user.admin}
         up_user.should == expect_user
+      end
+    end
+    context 'Invalid credentials' do
+      before do
+        @user = Fabricate(:user)
+        @user.ensure_authentication_token!
+        xhr :put,
+            :update,
+            :id => @user.id,
+            :auth_token => "qM42ynXmGRrV3tiBL9k7", # Invalid token
+            :user => {:current_password => @user.password,
+                      :name => "New Name"}
+      end
+      it 'returns http 401' do
+        response.response_code.should == 401
+      end
+    end
+    context 'No current password' do
+      before do
+        @user = Fabricate(:user)
+        @user.ensure_authentication_token!
+        xhr :put,
+            :update,
+            :id => @user.id,
+            :auth_token => @user.authentication_token,
+            :user => {:current_password => 'wrongPassword',
+                      :name => "New Name"}
+      end
+      it 'returns http 422' do
+        response.response_code.should == 422
       end
     end
   end
