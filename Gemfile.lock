@@ -63,7 +63,7 @@ GEM
     ember-auth-rails (4.0.1)
       ember-auth-source
       rails
-    ember-auth-source (3.0.3)
+    ember-auth-source (3.0.4)
       ember-rails (~> 0.10)
     ember-data-source (0.0.5)
       ember-source

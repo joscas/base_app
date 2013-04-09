@@ -8,10 +8,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
   
   def generic_provider
-    puts request.env["omniauth.auth"]
     @user = User.find_for_generic_provider(request.env["omniauth.auth"], current_user)
 
-    if @user.persisted?
+    if !@user.nil? && @user.persisted?
       @user.ensure_authentication_token!
       @user.remember_me!
       # Encode so that we can decode with JS decodeURIComponent in the browser

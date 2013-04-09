@@ -28,7 +28,7 @@ describe SessionsController do
     end
 
     context 'remember token auth' do
-      it_behaves_like 'auth response' do # uses shread example here
+      it_behaves_like 'auth response' do # uses shared example here
         let(:params) do
           user.remember_me!
           data = User.serialize_into_cookie(user)
