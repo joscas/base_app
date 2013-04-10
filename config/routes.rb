@@ -1,8 +1,8 @@
-# class OnlyAjaxRequest
-#   def matches?(request)
-#     request.xhr?
-#   end
-# end
+class OnlyAjaxRequest
+  def matches?(request)
+    request.xhr?
+  end
+end
 
 BaseApp::Application.routes.draw do
   devise_for :users, controllers: {sessions: 'sessions', registrations: 'registrations', omniauth_callbacks: 'omniauth_callbacks'}, :skip => [:registrations]
@@ -11,8 +11,8 @@ BaseApp::Application.routes.draw do
     post "/users", :to => "registrations#create"
   end
   
-  resources :users, only: [:index, :show]
-  #resources :users, only: [:index, :show], :constraints => OnlyAjaxRequest.new
+  #resources :users, only: [:index, :show]
+  resources :users, only: [:index, :show], :constraints => OnlyAjaxRequest.new
   root :to => 'application#index'
   match "/*path" => "application#index"
 

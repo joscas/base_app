@@ -15,13 +15,6 @@ class RegistrationsController < Devise::RegistrationsController
   
   def update
     resource = resource_class.find(params[:id])
-    # if (resource[:authentication_token] != params[:auth_token])
-    #   puts "!!!!!!!!!!!!!!!!!!!!!!!!!!!! invalid cred !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-    #   warden.custom_failure!
-    #   render json: {}, status: 444
-    #   return
-    # end
-
     if resource.update_with_password(resource_params)
       render json: resource, status: 201
       return

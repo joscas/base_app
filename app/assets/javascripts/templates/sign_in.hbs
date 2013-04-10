@@ -11,11 +11,11 @@
 			<legend>Sign In</legend>
 	    <label>
 				Email<br>
-	    	{{view Ember.TextField type="email" valueBinding="email"}}
+	    	{{view Ember.TextField type="email" name="email" valueBinding="email"}}
 			</label>
 	    <label>
 				Password<br>
-	    	{{view Ember.TextField type="password" valueBinding="password"}}
+	    	{{view Ember.TextField type="password" name="password" valueBinding="password"}}
 			</label>
 			<label class="checkbox">Remember me {{view Ember.Checkbox type="checkbox" checkedBinding="remember"}}</label>
 			<br>

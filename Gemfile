@@ -40,7 +40,12 @@ gem 'jquery-rails'
 group :test do  
   gem 'fabrication'
   gem 'shoulda'
-#  gem "capybara"
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  gem 'launchy'
+  #gem 'selenium-webdriver'
+  gem 'capybara', '<2.1.0'
+  gem 'poltergeist'
 #  gem "guard-rspec"
 end
 
