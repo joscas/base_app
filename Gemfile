@@ -43,9 +43,10 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
   gem 'launchy'
-  #gem 'selenium-webdriver'
+  gem 'selenium-webdriver'
   gem 'capybara', '<2.1.0'
   gem 'poltergeist'
+#  gem 'debugger'
 #  gem "guard-rspec"
 end
 

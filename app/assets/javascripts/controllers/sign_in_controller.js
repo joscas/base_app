@@ -19,7 +19,6 @@ BaseApp.SignInController = Em.ObjectController.extend(Auth.SignInController, {
       self.set('loginResponse', Auth.get('jqxhr').statusText);
     });
     Auth.on('signInSuccess', function() {
-      Auth.loggedUser = BaseApp.User.find(Auth.currentUserId);
       self.set('loginError', false);
     });
   },

@@ -33,6 +33,14 @@ describe UsersController do
         response.response_code.should == 401
       end
     end
+    
+    context 'wrong token' do
+      before { get :show, id: user.id, auth_token: "LTXpN9pzxbWFm55vx1za"} #Made up token
+
+      it 'returns http 401' do
+        response.response_code.should == 401
+      end
+    end
 
     context 'authorized' do
       before do

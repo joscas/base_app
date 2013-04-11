@@ -1,7 +1,6 @@
 BaseApp::Application.configure do
   
   config.ember.variant = :development
-  config.log_level = :debug
   
   # Settings specified here will take precedence over those in config/application.rb
 

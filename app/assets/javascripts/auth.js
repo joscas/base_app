@@ -6,6 +6,7 @@ Auth.Config.reopen({
   rememberMe: true,
   rememberTokenKey: 'remember_token',
   rememberPeriod: 14,
+  userModel: BaseApp.User,
   signInRoute: 'sign_in',
   authRedirect: true,
   signInRedirectFallbackRoute: 'home',

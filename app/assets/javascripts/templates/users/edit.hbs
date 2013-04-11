@@ -28,7 +28,7 @@
 				{{view Ember.TextField type="password" valueBinding='password_confirmation' name='password_confirmation'}}
 			</label>
 			<br>
-			<button {{action "save"}} class='btn'>Save</button>
-			<button type="button" class="btn" {{action "cancel"}}>Cancel</button>
+			<button {{action "save"}} class='btn' name="save">Save</button>
+			<button type="button" class="btn" {{action "cancel"}} name="cancel">Cancel</button>
 	</form>
 </div>
