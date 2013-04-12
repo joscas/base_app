@@ -6,7 +6,6 @@ BaseApp.ApplicationController = Ember.Controller.extend({
     var self=this;
     Auth.on('signOutSuccess', function() {
       self.transitionToRoute('home');
-      //location.reload();
     });
   },
   

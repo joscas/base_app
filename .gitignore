@@ -17,5 +17,8 @@
 # Ignore application configuration
 /config/application.yml
 
-# Ignore coverage resultset
-/coverage/.resultset.json
+# Ignore coverage
+/coverage
+
+# Ignore precompiled assets
+/public/assets

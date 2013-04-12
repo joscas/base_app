@@ -53,9 +53,6 @@ When(/^I follow the Oauth path for user "(.*?)" with email "(.*?)"$/) do |arg1, 
                :password_confirmation => '12345678',
                :admin => true
   user.ensure_authentication_token!
-  user.remember_me!
-  data = User.serialize_into_cookie(user)
-  url_token=URI.escape("#{data.first.first}-#{data.last}", Regexp.new("[^#{URI::PATTERN::UNRESERVED}]")) 
-  visit "/callback/#{url_token}"
+  visit "/?auth_token=#{user.authentication_token}/#/callback"
 end
 

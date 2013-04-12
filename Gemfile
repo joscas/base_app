@@ -46,8 +46,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'capybara', '<2.1.0'
   gem 'poltergeist'
-#  gem 'debugger'
-#  gem "guard-rspec"
 end
 
 group :development, :test do

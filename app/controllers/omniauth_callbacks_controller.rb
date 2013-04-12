@@ -12,17 +12,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     if !@user.nil? && @user.persisted?
       @user.ensure_authentication_token!
-      @user.remember_me!
-      # Encode so that we can decode with JS decodeURIComponent in the browser
-      url_token=URI.escape(remember_token(@user), Regexp.new("[^#{URI::PATTERN::UNRESERVED}]")) 
-	    redirect_to "/callback/#{url_token}" 
+	    redirect_to "/?auth_token=#{@user.authentication_token}/#/callback"
     else
       redirect_to "/err_500"
     end
-  end
-	
-	def remember_token(resource)
-    data = resource_class.serialize_into_cookie(resource)
-    "#{data.first.first}-#{data.last}"
   end
 end

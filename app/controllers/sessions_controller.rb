@@ -1,11 +1,15 @@
 class SessionsController < Devise::SessionsController
 
   def create
-    unless (params[:email] && params[:password]) || (params[:remember_token])
-        return missing_params
+    if params[:email] && params[:password]
+      resource = resource_from_credentials
+    elsif params[:remember_token]
+      resource = resource_from_remember_token
+    elsif params[:auth_token]
+      resource = resource_class.find_by(authentication_token: params[:auth_token])
+    else
+      return missing_params
     end
-    
-    resource = (params[:remember_token]) ? resource_from_remember_token : resource_from_credentials
     
     return invalid_credentials unless resource
 

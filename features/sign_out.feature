@@ -11,5 +11,5 @@ Feature: Sign Out
     And I click "Sign In" button
 		Then I should see link "Admin User"
 		And I should see link "Users"
-		#And I click "Sign Out"
-		#Then I should see link "Sign In"
+		And I click "Sign Out"
+		Then I should see link "Sign In"

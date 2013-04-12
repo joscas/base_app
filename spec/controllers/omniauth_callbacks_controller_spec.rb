@@ -23,12 +23,12 @@ describe OmniauthCallbacksController do
         response.response_code.should == 302
       end
       it 'redirects to callback path' do
-        path = URI.parse(response.header['Location']).path.scan(/\/(callback)\/(.*)/)[0][0]
+        path = response.header['Location'].scan(/\/?auth_token=(.*)\/#\/(callback)/)[0][1]
         path.should == 'callback'
       end
-      it 'returns remember token' do
-        remember_token = URI.parse(response.header['Location']).path.scan(/\/(callback)\/(.*)/)[0][1]
-        remember_token.should_not be_empty
+      it 'returns auth token' do
+        auth_token = response.header['Location'].scan(/\/?auth_token=(.*)\/#\/(callback)/)[0][0]
+        auth_token.should_not be_empty
       end
     end
     context 'auth failure' do
@@ -45,40 +45,40 @@ describe OmniauthCallbacksController do
   end
   
   describe 'POST linkedin' do
-    context 'auth success' do
-      before do
-        OmniAuth.config.mock_auth[:linkedin] = OmniAuth::AuthHash.new({:provider => 'linkedin',
-                                                   :uid => '123545',
-                                                   :info => {
-                                                     :name => 'Linkedin user',
-                                                     :email => 'test_linkedin_user@example.com'
-                                                    }
-                                                   })
-       request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:linkedin]
-       post :linkedin
+      context 'auth success' do
+        before do
+          OmniAuth.config.mock_auth[:linkedin] = OmniAuth::AuthHash.new({:provider => 'linkedin',
+                                                     :uid => '123545',
+                                                     :info => {
+                                                       :name => 'Linkedin user',
+                                                       :email => 'test_linkedin_user@example.com'
+                                                      }
+                                                     })
+         request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:linkedin]
+         post :linkedin
+        end
+        it 'redirects' do
+          response.response_code.should == 302
+        end
+        it 'redirects to callback path' do
+          path = response.header['Location'].scan(/\/?auth_token=(.*)\/#\/(callback)/)[0][1]
+          path.should == 'callback'
+        end
+        it 'returns auth token' do
+          auth_token = response.header['Location'].scan(/\/?auth_token=(.*)\/#\/(callback)/)[0][0]
+          auth_token.should_not be_empty
+        end
       end
-      it 'redirects' do
-        response.response_code.should == 302
-      end
-      it 'redirects to callback path' do
-        path = URI.parse(response.header['Location']).path.scan(/\/(callback)\/(.*)/)[0][0]
-        path.should == 'callback'
-      end
-      it 'returns remember token' do
-        remember_token = URI.parse(response.header['Location']).path.scan(/\/(callback)\/(.*)/)[0][1]
-        remember_token.should_not be_empty
+      context 'auth failure' do
+        before do
+          OmniAuth.config.mock_auth[:linkedin] = :invalid_credentials
+          request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:linkedin]
+          post :linkedin
+        end
+        it 'redirects to err_500' do
+          path = URI.parse(response.header['Location']).path.scan(/\/(err_500)/)[0][0]
+          path.should == 'err_500'
+        end
       end
     end
-    context 'auth failure' do
-      before do
-        OmniAuth.config.mock_auth[:linkedin] = :invalid_credentials
-        request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:linkedin]
-        post :linkedin
-      end
-      it 'redirects to err_500' do
-        path = URI.parse(response.header['Location']).path.scan(/\/(err_500)/)[0][0]
-        path.should == 'err_500'
-      end
-    end
-  end
 end

@@ -1,4 +1,5 @@
 Auth.Config.reopen({
+  urlAuthentication: true, //Used for Oauth callback 
   tokenCreateUrl: '/users/sign_in',
   tokenDestroyUrl: '/users/sign_out',
   tokenKey: 'auth_token',
@@ -9,5 +10,5 @@ Auth.Config.reopen({
   userModel: BaseApp.User,
   signInRoute: 'sign_in',
   authRedirect: true,
-  signInRedirectFallbackRoute: 'home',
+  signInRedirectFallbackRoute: 'home',  
 });
