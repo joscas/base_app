@@ -21,4 +21,4 @@
 /coverage
 
 # Ignore precompiled assets
-/public/assets
+#/public/assets

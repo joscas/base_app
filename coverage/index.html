@@ -14,7 +14,7 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-04-12T19:36:59+02:00">2013-04-12T19:36:59+02:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-04-12T19:57:46+02:00">2013-04-12T19:57:46+02:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.26
+         4.24
        </span>
     </span> hits/line)
   </h2>
@@ -87,7 +87,7 @@
         <td>39</td>
         <td>39</td>
         <td>0</td>
-        <td>11.6</td>
+        <td>11.5</td>
       </tr>
       
       <tr>
@@ -153,7 +153,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.9
+         4.88
        </span>
     </span> hits/line)
   </h2>
@@ -215,7 +215,7 @@
         <td>39</td>
         <td>39</td>
         <td>0</td>
-        <td>11.6</td>
+        <td>11.5</td>
       </tr>
       
       <tr>
@@ -1047,8 +1047,8 @@
           <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="29">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="4" data-linenumber="29">
+          <span class="hits">4</span>
           
           <code class="ruby">    return missing_params unless params[:auth_token]</code>
         </li>
@@ -1059,14 +1059,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="31">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="3" data-linenumber="31">
+          <span class="hits">3</span>
           
           <code class="ruby">    resource = resource_class.find_by(authentication_token: params[:auth_token])</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="32">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="3" data-linenumber="32">
+          <span class="hits">3</span>
           
           <code class="ruby">    return invalid_credentials unless resource</code>
         </li>
@@ -1077,14 +1077,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="34">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="34">
+          <span class="hits">2</span>
           
           <code class="ruby">    resource.reset_authentication_token!</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="35">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="35">
+          <span class="hits">2</span>
           
           <code class="ruby">    render json: {user_id: resource.id}, status: 200</code>
         </li>
