@@ -84,8 +84,8 @@ GEM
     ember-auth-rails (4.0.1)
       ember-auth-source
       rails
-    ember-auth-source (3.1.0)
-      ember-rails (~> 0.10)
+    ember-auth-source (3.1.2)
+      ember-source (>= 0.0.2, != 1.0.0.rc1.2, != 1.0.0.rc1.1, != 1.0.0.rc1.0.0, != 1.0.0.pre4.1)
     ember-data-source (0.0.5)
       ember-source
     ember-rails (0.11.1)
@@ -168,8 +168,8 @@ GEM
       omniauth (~> 1.0)
     origin (1.0.11)
     orm_adapter (0.4.0)
-    poltergeist (1.1.0)
-      capybara (~> 2.0, >= 2.0.1)
+    poltergeist (1.1.1)
+      capybara (~> 2.0.1)
       faye-websocket (~> 0.4, >= 0.4.4)
       http_parser.rb (~> 0.5.3)
     polyglot (0.3.3)
@@ -226,7 +226,7 @@ GEM
     shoulda (3.4.0)
       shoulda-context (~> 1.0, >= 1.0.1)
       shoulda-matchers (~> 1.0, >= 1.4.1)
-    shoulda-context (1.1.0)
+    shoulda-context (1.1.1)
     shoulda-matchers (1.5.6)
       activesupport (>= 3.0.0)
       bourne (~> 1.3)
