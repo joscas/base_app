@@ -44,7 +44,7 @@ group :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
-  gem 'capybara', '<2.1.0'
+  gem 'capybara'
   gem 'poltergeist'
 end
 
