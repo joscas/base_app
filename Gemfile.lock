@@ -30,7 +30,6 @@ GEM
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
-    addressable (2.3.4)
     arel (3.0.2)
     barber (0.4.0)
       ember-template-compiler-source
@@ -117,8 +116,6 @@ GEM
     json (1.7.7)
     jwt (0.1.8)
       multi_json (>= 1.5)
-    launchy (2.3.0)
-      addressable (~> 2.3)
     libv8 (3.11.8.17)
     mail (2.5.3)
       i18n (>= 0.4.0)
@@ -265,7 +262,6 @@ DEPENDENCIES
   fabrication
   figaro
   jquery-rails
-  launchy
   mongoid
   omniauth-google-oauth2
   omniauth-linkedin
