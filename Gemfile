@@ -42,8 +42,8 @@ group :test do
   gem 'shoulda'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
-  gem 'launchy'
-  gem 'selenium-webdriver'
+  #gem 'launchy'
+  #gem 'selenium-webdriver'
   gem 'capybara'
   gem 'poltergeist'
 end
@@ -55,7 +55,6 @@ end
 
 gem 'thin'
 gem 'mongoid'
-gem 'handlebars-source', '1.0.0.rc3'
 gem 'ember-rails'
 gem 'ember-auth-rails'
 gem 'therubyracer'
