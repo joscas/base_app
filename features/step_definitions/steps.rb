@@ -27,11 +27,16 @@ Then(/^I should see an error$/) do
 end
 
 Then(/^I take screenshot$/) do
-  #page.driver.render('~/Downloads/screenshot_POLTERGEIST.png', :full => true)
+  page.driver.render('tmp/screenshot_POLTERGEIST.png', :full => true)
+end
+
+Then(/^I take screenshot "(.*?)"$/) do |arg1|
+  page.driver.render("tmp/screenshot_POLTERGEIST_#{arg1}.png", :full => true)
 end
 
 Then(/^I reload the page$/) do
   visit current_path
+  #visit "/"
 end
 
 When(/^I check "(.*?)"$/) do |arg1|
@@ -54,5 +59,9 @@ When(/^I follow the Oauth path for user "(.*?)" with email "(.*?)"$/) do |arg1, 
                :admin => true
   user.ensure_authentication_token!
   visit "/?auth[auth_token]=#{user.authentication_token}&auth[remember]=true/#/callback"
+end
+
+Then(/^I wait "(.*?)" seconds$/) do |arg1|
+  sleep arg1.to_i
 end
 
