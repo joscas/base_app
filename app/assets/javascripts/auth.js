@@ -1,6 +1,7 @@
 Auth.Config.reopen({
   urlAuthentication: true, //Used for Oauth callback 
   urlAuthenticationParamsKey: 'auth',
+  urlAuthenticationRouteScope: 'both',
   tokenCreateUrl: '/users/sign_in',
   tokenDestroyUrl: '/users/sign_out',
   tokenKey: 'auth_token',

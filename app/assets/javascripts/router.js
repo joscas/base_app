@@ -1,3 +1,4 @@
+// history is not supported for IE <= 9.0
 /*BaseApp.Router.reopen({
   location: 'history'
 });*/

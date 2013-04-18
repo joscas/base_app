@@ -53,6 +53,6 @@ When(/^I follow the Oauth path for user "(.*?)" with email "(.*?)"$/) do |arg1, 
                :password_confirmation => '12345678',
                :admin => true
   user.ensure_authentication_token!
-  visit "/?auth_token=#{user.authentication_token}/#/callback"
+  visit "/?auth[auth_token]=#{user.authentication_token}&auth[remember]=true/#/callback"
 end
 

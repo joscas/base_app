@@ -4,6 +4,7 @@ describe OmniauthCallbacksController do
   before(:each) do
     @request.env["devise.mapping"] = Devise.mappings[:user]
     OmniAuth.config.test_mode = true
+    @url_regex = /\/?auth\[auth_token\]=(.*)&auth\[remember\]=true\/#\/(callback)/
   end
 
   describe 'POST google_oauth2' do
@@ -23,11 +24,11 @@ describe OmniauthCallbacksController do
         response.response_code.should == 302
       end
       it 'redirects to callback path' do
-        path = response.header['Location'].scan(/\/?auth_token=(.*)\/#\/(callback)/)[0][1]
+        path = response.header['Location'].scan(@url_regex)[0][1]
         path.should == 'callback'
       end
       it 'returns auth token' do
-        auth_token = response.header['Location'].scan(/\/?auth_token=(.*)\/#\/(callback)/)[0][0]
+        auth_token = response.header['Location'].scan(@url_regex)[0][0]
         auth_token.should_not be_empty
       end
     end
@@ -61,11 +62,11 @@ describe OmniauthCallbacksController do
           response.response_code.should == 302
         end
         it 'redirects to callback path' do
-          path = response.header['Location'].scan(/\/?auth_token=(.*)\/#\/(callback)/)[0][1]
+          path = response.header['Location'].scan(@url_regex)[0][1]
           path.should == 'callback'
         end
         it 'returns auth token' do
-          auth_token = response.header['Location'].scan(/\/?auth_token=(.*)\/#\/(callback)/)[0][0]
+          auth_token = response.header['Location'].scan(@url_regex)[0][0]
           auth_token.should_not be_empty
         end
       end

@@ -1,6 +1,12 @@
 class SessionsController < Devise::SessionsController
 
   def create
+    
+    if params[:auth].present?
+      params[:auth_token] = params[:auth][:auth_token]
+      params[:remember] = params[:auth][:remember]
+    end
+    
     if params[:email] && params[:password]
       resource = resource_from_credentials
     elsif params[:remember_token]
@@ -18,7 +24,7 @@ class SessionsController < Devise::SessionsController
       user_id: resource.id,
       auth_token: resource.authentication_token,
     }
-    if params[:remember]
+    if params[:remember] or params[:remember] == 'true'
       resource.remember_me!
       data[:remember_token] = remember_token(resource)
     end
