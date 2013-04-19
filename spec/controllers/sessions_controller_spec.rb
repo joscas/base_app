@@ -37,6 +37,25 @@ describe SessionsController do
         end
       end
     end
+    
+    context 'url-authentication auth' do
+      before do
+        @user = Fabricate(:user)
+        @user.ensure_authentication_token!
+        auth_token = @user.authentication_token
+        xhr :post,
+            :create,
+            :auth_token => auth_token,
+            :remember => 'true'
+      end
+      it 'returns http 201' do
+        response.response_code.should == 201
+      end
+      subject { JSON.parse response.body }
+      it { should include 'user_id' }
+      it { should include 'auth_token' }
+      it { should include 'remember_token'}
+    end
   end
 
   describe 'DELETE destroy' do

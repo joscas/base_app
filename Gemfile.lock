@@ -32,8 +32,8 @@ GEM
       multi_json (~> 1.0)
     addressable (2.3.4)
     arel (3.0.2)
-    barber (0.4.0)
-      ember-template-compiler-source
+    barber (0.4.2)
+      ember-source
       execjs
       handlebars-source
     bcrypt-ruby (3.0.1)
@@ -83,15 +83,19 @@ GEM
     ember-auth-rails (4.0.1)
       ember-auth-source
       rails
-    ember-auth-source (3.1.0)
-      ember-rails (~> 0.10)
-    ember-rails (0.10.0)
+    ember-auth-source (4.1.4)
+      ember-source (>= 0.0.2, != 1.0.0.rc1.2, != 1.0.0.rc1.1, != 1.0.0.rc1.0.0, != 1.0.0.pre4.1)
+    ember-data-source (0.0.5)
+      ember-source
+    ember-rails (0.11.1)
       active_model_serializers
-      barber
+      barber (>= 0.4.1)
+      ember-data-source
+      ember-source
       execjs (>= 1.2)
       railties (>= 3.1)
-    ember-template-compiler-source (1.0.0.pre4.4)
-      handlebars-source (>= 1.0.0.rc2)
+    ember-source (1.0.0.rc2.2)
+      handlebars-source (>= 1.0.0.rc3, < 1.0.0.rc4)
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (1.4.0)
@@ -107,7 +111,7 @@ GEM
       rails (>= 3, < 5)
     gherkin (2.11.8)
       multi_json (~> 1.3)
-    handlebars-source (1.0.9)
+    handlebars-source (1.0.0.rc.3)
     hashie (2.0.3)
     hike (1.2.2)
     http_parser.rb (0.5.3)
@@ -272,6 +276,7 @@ DEPENDENCIES
   database_cleaner
   devise
   ember-auth-rails
+  ember-auth-source
   ember-rails
   fabrication
   figaro

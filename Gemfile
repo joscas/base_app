@@ -57,6 +57,8 @@ gem 'thin'
 gem 'mongoid'
 gem 'ember-rails'
 gem 'ember-auth-rails'
+gem "ember-auth-rails"
+gem "ember-auth-source"
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
