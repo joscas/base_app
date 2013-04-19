@@ -42,9 +42,9 @@ group :test do
   gem 'shoulda'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
-  #gem 'launchy'
-  #gem 'selenium-webdriver'
-  #gem 'capybara'
+  gem 'launchy'
+  gem 'selenium-webdriver'
+  gem 'capybara'
   gem 'poltergeist'
 end
 
