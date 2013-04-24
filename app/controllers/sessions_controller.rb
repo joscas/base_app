@@ -6,7 +6,7 @@ class SessionsController < Devise::SessionsController
     elsif params[:remember_token]
       resource = resource_from_remember_token
     elsif params[:auth_token]
-      resource = resource_class.find_by(authentication_token: params[:auth_token])
+      resource = resource_class.where(authentication_token: params[:auth_token]).first
     else
       return missing_params
     end
@@ -28,7 +28,7 @@ class SessionsController < Devise::SessionsController
   def destroy
     return missing_params unless params[:auth_token]
 
-    resource = resource_class.find_by(authentication_token: params[:auth_token])
+    resource = resource_class.where(authentication_token: params[:auth_token]).first
     return invalid_credentials unless resource
 
     resource.reset_authentication_token!
