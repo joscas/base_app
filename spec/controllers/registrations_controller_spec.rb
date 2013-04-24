@@ -52,10 +52,11 @@ describe RegistrationsController do
       end
       it 'returns updated user' do
         up_user = JSON.parse(response.body)['user']
-        expect_user = {'id' => @user.id.to_s, # id is a MongoDB BSON ObjectID
-                           'name' => @user.name,
-                           'email' => @user.email,
-                           'admin' => @user.admin}
+        expect_user = {
+          'id' => @user.id,
+          'name' => @user.name,
+          'email' => @user.email,
+          'admin' => @user.admin }
         up_user.should == expect_user
       end
     end
@@ -75,10 +76,11 @@ describe RegistrationsController do
       end
       it 'returns updated user' do
         up_user = JSON.parse(response.body)['user']
-        expect_user = {'id' => @user.id.to_s, # id is a MongoDB BSON ObjectID
-                           'name' => "New Name",
-                           'email' => @user.email,
-                           'admin' => @user.admin}
+        expect_user = {
+          'id' => @user.id,
+          'name' => "New Name",
+          'email' => @user.email,
+          'admin' => @user.admin }
         up_user.should == expect_user
       end
     end

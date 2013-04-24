@@ -135,12 +135,6 @@ GEM
     mime-types (1.22)
     mocha (0.13.3)
       metaclass (~> 0.0.1)
-    mongoid (3.1.3)
-      activemodel (~> 3.2)
-      moped (~> 1.4.2)
-      origin (~> 1.0)
-      tzinfo (~> 0.3.22)
-    moped (1.4.5)
     multi_json (1.7.2)
     multipart-post (1.2.0)
     nokogiri (1.5.9)
@@ -165,7 +159,6 @@ GEM
     omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
-    origin (1.0.11)
     orm_adapter (0.4.0)
     poltergeist (1.2.0)
       capybara (~> 2.1.0)
@@ -238,6 +231,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    sqlite3 (1.3.7)
     therubyracer (0.11.4)
       libv8 (~> 3.11.8.12)
       ref
@@ -282,7 +276,6 @@ DEPENDENCIES
   figaro
   jquery-rails
   launchy
-  mongoid
   omniauth-google-oauth2
   omniauth-linkedin
   poltergeist
@@ -291,6 +284,7 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   selenium-webdriver
   shoulda
+  sqlite3
   therubyracer
   thin
   twitter-bootstrap-rails
