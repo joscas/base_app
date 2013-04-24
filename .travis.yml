@@ -1,10 +1,10 @@
 language: ruby
 rvm:
   - "1.9.3"
-# uncomment this line if your project needs to run something other than `rake`:
-# script: bundle exec rspec spec
-services:
-  - mongodb
-  
+
+env:
+  - DB=sqlite
+
 script:
+  - RAILS_ENV=test bundle exec rake --trace db:migrate test
   - bundle exec rake spec
