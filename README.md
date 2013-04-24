@@ -7,7 +7,7 @@
 This application is intended to serve as a starting point for single page web applications with a rails backend.
 It provides generic user registration with Ember.js and Ember-auth. Backend is implemented with Ruby on Rails and Devise. OAuth with different strategies is included.
 
-Master branch is based on MongoDB + Mongoid. For ActiveRecord support use the active_record branch. 
+Master branch is based on MongoDB + Mongoid. For ActiveRecord support use the [active_record](https://github.com/joscas/base_app/tree/active_record "ActiveRecord supported") branch. 
 
 ## Live deploy
 
