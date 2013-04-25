@@ -49,7 +49,7 @@ group :test do
 end
 
 group :development, :test do
-  gem "rspec-rails"
+  gem 'rspec-rails'
   gem 'coveralls', require: false
 end
 
@@ -57,12 +57,13 @@ gem 'thin'
 gem 'mongoid'
 gem 'ember-rails'
 gem 'ember-auth-rails'
-gem "ember-auth-rails"
-gem "ember-auth-source"
+gem 'ember-auth-rails'
+gem 'ember-auth-source'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'active_model_serializers'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-linkedin'
-gem "figaro"
+gem 'figaro'
+gem 'rack-cors', :require => 'rack/cors'
