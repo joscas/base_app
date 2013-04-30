@@ -23,8 +23,5 @@
 # Ignore precompiled assets
 /public/assets
 
-# Ignore coverage
-/coverage
-
 # Ignore phonegap
 /phonegap

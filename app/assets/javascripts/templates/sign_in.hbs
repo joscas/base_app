@@ -1,5 +1,8 @@
-{{partial oauth}}
 <div class="session_form">
+	<legend>Sign In</legend>
+	<p>Sign in with: </p>
+	{{view BaseApp.Oauth}}
+	<br><br>
 	{{#if loginError}}
 		<div class="alert alert-error">
 		  <button type="button" class="close" data-dismiss="alert" {{action "dismissError"}}>&times;</button>
@@ -8,7 +11,6 @@
 	{{/if}}
 	<form>
 		<fieldset>
-			<legend>Sign In</legend>
 	    <label>
 				Email<br>
 	    	{{view Ember.TextField type="email" name="email" valueBinding="email"}}
