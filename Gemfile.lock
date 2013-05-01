@@ -167,6 +167,7 @@ GEM
       omniauth (~> 1.0)
     origin (1.1.0)
     orm_adapter (0.4.0)
+    phonegap-rails (0.0.7)
     poltergeist (1.2.0)
       capybara (~> 2.1.0)
       faye-websocket (~> 0.4, >= 0.4.4)
@@ -287,6 +288,7 @@ DEPENDENCIES
   mongoid
   omniauth-google-oauth2
   omniauth-linkedin
+  phonegap-rails
   poltergeist
   rack-cors
   rails

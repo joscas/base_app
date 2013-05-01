@@ -66,4 +66,7 @@ gem 'active_model_serializers'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-linkedin'
 gem 'figaro'
+
+# Mobile related gems
 gem 'rack-cors', :require => 'rack/cors'
+gem 'phonegap-rails'

@@ -25,3 +25,4 @@
 
 # Ignore phonegap
 /phonegap
+/config/phonegap_rails.yml
