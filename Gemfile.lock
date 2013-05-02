@@ -167,7 +167,7 @@ GEM
       omniauth (~> 1.0)
     origin (1.1.0)
     orm_adapter (0.4.0)
-    phonegap-rails (0.0.8)
+    phonegap-rails (0.0.10)
     poltergeist (1.2.0)
       capybara (~> 2.1.0)
       faye-websocket (~> 0.4, >= 0.4.4)

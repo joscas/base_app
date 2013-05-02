@@ -11,7 +11,8 @@ BaseApp.Oauth = Em.View.extend({
     var app = document.URL.indexOf( 'http://' ) === -1 && document.URL.indexOf( 'https://' ) === -1;
     if (app) {
       //PhoneGap application
-      var url = 'https://starter-app.herokuapp.com' + href;
+      //alert(DS.defaultStore.adapter.url);
+      var url = Auth.Config.baseUrl + href;
       // Open call with InAppBrowser
       var ref = window.open(url,'_blank','location=no');
       var interceptCallback = function(event) {
