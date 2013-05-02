@@ -1,4 +1,4 @@
-BaseApp.UsersIndexRoute = Auth.Route.extend({
+BaseApp.UsersIndexRoute = Ember.Route.extend(BaseApp.Auth.AuthRedirectable,{
   model: function() {
     return BaseApp.User.find();
   },

@@ -1,4 +1,4 @@
-BaseApp.IndexRoute = Ember.Route.extend(BaseApp.Auth.AuthRedirectable,{
+BaseApp.IndexRoute = Ember.Route.extend({
   redirect: function() {
     this.transitionTo('home');
   }
