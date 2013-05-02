@@ -27,5 +27,5 @@ Feature: Sign In
  		Then I should see link "google_oauth"
  		And I should see link "linkedin_oauth"
  		When I follow the Oauth path for user "Google User" with email "test_user@gmail.com"
-		And I wait "2" seconds
+		And I wait "4" seconds
  		Then I should see link "Google User"

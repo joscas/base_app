@@ -3,7 +3,7 @@ BaseApp.Auth = Ember.Auth.create({
             'rememberable',
             'authRedirectable',
             'actionRedirectable',
-            //'urlAuthenticatable'
+            'urlAuthenticatable'
             ],
   signInEndPoint: '/users/sign_in',
   signOutEndPoint: '/users/sign_out',
@@ -22,7 +22,7 @@ BaseApp.Auth = Ember.Auth.create({
     signInRoute: 'home',
     signOutRoute: 'home'
   },
-  // urlAuthenticatable: {
-  //   paramsKey: 'auth'
-  // }
+  urlAuthenticatable: {
+    paramsKey: 'auth'
+  }
 });

@@ -12,7 +12,7 @@
 		</ul>
 		<ul class='nav pull-right'>
 			{{#if BaseApp.Auth.signedIn}}
-				<li class="disabled">{{#linkTo "users.show" BaseApp.Auth.user}}{{BaseApp.Auth.user.name}}{{/linkTo}}</li>
+				<li class="activeUser:active">{{#linkTo "users.show" BaseApp.Auth.user}}{{BaseApp.Auth.user.name}}{{/linkTo}}</li>
 				<li class="divider-vertical"></li>
 		  	<li {{bindAttr class="activeSignOut:active"}}><a  href="#" {{action "signOut"}}>Sign Out</a></li>
 			{{else}}

@@ -14,7 +14,7 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-05-02T20:03:26+02:00">2013-05-02T20:03:26+02:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-05-02T23:33:35+02:00">2013-05-02T23:33:35+02:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.41
+         4.71
        </span>
     </span> hits/line)
   </h2>
@@ -87,7 +87,7 @@
         <td>39</td>
         <td>39</td>
         <td>0</td>
-        <td>13.0</td>
+        <td>14.2</td>
       </tr>
       
       <tr>
@@ -97,7 +97,7 @@
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>2.6</td>
+        <td>3.0</td>
       </tr>
       
       <tr>
@@ -117,7 +117,7 @@
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>2.8</td>
+        <td>3.1</td>
       </tr>
       
       <tr>
@@ -137,7 +137,7 @@
         <td>4</td>
         <td>4</td>
         <td>0</td>
-        <td>6.0</td>
+        <td>6.8</td>
       </tr>
       
     </tbody>
@@ -153,7 +153,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.18
+         5.5
        </span>
     </span> hits/line)
   </h2>
@@ -215,7 +215,7 @@
         <td>39</td>
         <td>39</td>
         <td>0</td>
-        <td>13.0</td>
+        <td>14.2</td>
       </tr>
       
       <tr>
@@ -225,7 +225,7 @@
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>2.6</td>
+        <td>3.0</td>
       </tr>
       
     </tbody>
@@ -324,7 +324,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.4
+         2.55
        </span>
     </span> hits/line)
   </h2>
@@ -366,7 +366,7 @@
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>2.8</td>
+        <td>3.1</td>
       </tr>
       
     </tbody>
@@ -455,7 +455,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         6.0
+         6.8
        </span>
     </span> hits/line)
   </h2>
@@ -487,7 +487,7 @@
         <td>4</td>
         <td>4</td>
         <td>0</td>
-        <td>6.0</td>
+        <td>6.8</td>
       </tr>
       
     </tbody>
@@ -909,14 +909,14 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="41" data-linenumber="4">
-          <span class="hits">41</span>
+        <li class="covered" data-hits="45" data-linenumber="4">
+          <span class="hits">45</span>
           
           <code class="ruby">    if params[:email] &amp;&amp; params[:password]</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="5">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="24" data-linenumber="5">
+          <span class="hits">24</span>
           
           <code class="ruby">      resource = resource_from_credentials</code>
         </li>
@@ -927,8 +927,8 @@
           <code class="ruby">    elsif params[:remember_token]</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="7">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="15" data-linenumber="7">
+          <span class="hits">15</span>
           
           <code class="ruby">      resource = resource_from_remember_token</code>
         </li>
@@ -939,8 +939,8 @@
           <code class="ruby">    elsif params[:auth_token]</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="9">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="9">
+          <span class="hits">5</span>
           
           <code class="ruby">      resource = resource_class.find_by(authentication_token: params[:auth_token])</code>
         </li>
@@ -969,8 +969,8 @@
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="40" data-linenumber="14">
-          <span class="hits">40</span>
+        <li class="covered" data-hits="44" data-linenumber="14">
+          <span class="hits">44</span>
           
           <code class="ruby">    return invalid_credentials unless resource</code>
         </li>
@@ -981,14 +981,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="16">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="42" data-linenumber="16">
+          <span class="hits">42</span>
           
           <code class="ruby">    resource.ensure_authentication_token!</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="17">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="42" data-linenumber="17">
+          <span class="hits">42</span>
           
           <code class="ruby">    data = {</code>
         </li>
@@ -1011,20 +1011,20 @@
           <code class="ruby">    }</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="21">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="42" data-linenumber="21">
+          <span class="hits">42</span>
           
           <code class="ruby">    if params[:remember] or params[:remember] == 'true'</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="22">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="15" data-linenumber="22">
+          <span class="hits">15</span>
           
           <code class="ruby">      resource.remember_me!</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="23">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="15" data-linenumber="23">
+          <span class="hits">15</span>
           
           <code class="ruby">      data[:remember_token] = remember_token(resource)</code>
         </li>
@@ -1035,8 +1035,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="25">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="42" data-linenumber="25">
+          <span class="hits">42</span>
           
           <code class="ruby">    render json: data, status: 201</code>
         </li>
@@ -1191,14 +1191,14 @@
           <code class="ruby">  def remember_token(resource)</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="51">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="15" data-linenumber="51">
+          <span class="hits">15</span>
           
           <code class="ruby">    data = resource_class.serialize_into_cookie(resource)</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="52">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="15" data-linenumber="52">
+          <span class="hits">15</span>
           
           <code class="ruby">    &quot;#{data.first.first}-#{data.last}&quot;</code>
         </li>
@@ -1221,20 +1221,20 @@
           <code class="ruby">  def resource_from_remember_token</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="56">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="15" data-linenumber="56">
+          <span class="hits">15</span>
           
           <code class="ruby">    token = params[:remember_token]</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="57">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="15" data-linenumber="57">
+          <span class="hits">15</span>
           
           <code class="ruby">    id, identifier = token.split('-')</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="58">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="15" data-linenumber="58">
+          <span class="hits">15</span>
           
           <code class="ruby">    User.serialize_from_cookie(id, identifier)</code>
         </li>
@@ -1257,26 +1257,26 @@
           <code class="ruby">  def resource_from_credentials</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="62">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="24" data-linenumber="62">
+          <span class="hits">24</span>
           
           <code class="ruby">    data = { email: params[:email] }</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="63">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="24" data-linenumber="63">
+          <span class="hits">24</span>
           
           <code class="ruby">    if res = User.find_for_database_authentication(data)</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="64">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="23" data-linenumber="64">
+          <span class="hits">23</span>
           
           <code class="ruby">      if res.valid_password?(params[:password])</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="65">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="22" data-linenumber="65">
+          <span class="hits">22</span>
           
           <code class="ruby">        res</code>
         </li>
@@ -1389,8 +1389,8 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="11">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="11" data-linenumber="11">
+          <span class="hits">11</span>
           
           <code class="ruby">    render json: User.find(params[:id])</code>
         </li>
@@ -1473,8 +1473,8 @@
           <code class="ruby">  def auth_only!</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="4">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="13" data-linenumber="4">
+          <span class="hits">13</span>
           
           <code class="ruby">    unless params[:auth_token] &amp;&amp; user_signed_in?</code>
         </li>
@@ -2013,8 +2013,8 @@
           <code class="ruby">  def id</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="5">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="21" data-linenumber="5">
+          <span class="hits">21</span>
           
           <code class="ruby">    object._id</code>
         </li>
