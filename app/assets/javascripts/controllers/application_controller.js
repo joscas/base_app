@@ -2,11 +2,7 @@ BaseApp.ApplicationController = Ember.Controller.extend({
   needs: ["users_edit"],
   
   signOut: function() {
-    Auth.signOut();
-    var self=this;
-    Auth.on('signOutSuccess', function() {
-      self.transitionToRoute('home');
-    });
+    BaseApp.Auth.signOut();
   },
   
   activeHome: (function() {
@@ -19,6 +15,10 @@ BaseApp.ApplicationController = Ember.Controller.extend({
   
   activeUsers: (function() {
       return this.get('currentRoute') === 'users';
+  }).property('currentRoute'),
+  
+  activeUser: (function() {
+      return this.get('currentRoute') === 'user';
   }).property('currentRoute'),
   
   activeSignIn: (function() {

@@ -3,16 +3,16 @@
 		<ul class='nav pull-left'>
 			<li {{bindAttr class="activeHome:active"}}>{{#linkTo "home"}}Home{{/linkTo}}</li>
 			<li class="divider-vertical"></li>
-			{{#if Auth.authToken}}
-				{{#if Auth.currentUser.admin}}
+			{{#if BaseApp.Auth.signedIn}}
+				{{#if BaseApp.Auth.user.admin}}
 					<li {{bindAttr class="activeUsers:active"}}>{{#linkTo "users.index"}}Users{{/linkTo}}</li>
 					<li class="divider-vertical"></li>
 				{{/if}}
 			{{/if}}
 		</ul>
 		<ul class='nav pull-right'>
-			{{#if Auth.authToken}}
-				<li class="disabled">{{#linkTo "users.show" Auth.currentUser}}{{Auth.currentUser.name}}{{/linkTo}}</li>
+			{{#if BaseApp.Auth.signedIn}}
+				<li class="activeUser:active">{{#linkTo "users.show" BaseApp.Auth.user}}{{BaseApp.Auth.user.name}}{{/linkTo}}</li>
 				<li class="divider-vertical"></li>
 		  	<li {{bindAttr class="activeSignOut:active"}}><a  href="#" {{action "signOut"}}>Sign Out</a></li>
 			{{else}}

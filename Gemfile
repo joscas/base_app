@@ -49,19 +49,18 @@ group :test do
 end
 
 group :development, :test do
-  gem "rspec-rails"
+  gem 'rspec-rails'
   gem 'coveralls', require: false
 end
 
 gem 'thin'
 gem 'ember-rails'
 gem 'ember-auth-rails'
-gem "ember-auth-rails"
-gem "ember-auth-source"
+gem 'ember-auth-source', '~> 6.0.0'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'active_model_serializers'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-linkedin'
-gem "figaro"
+gem 'figaro'
