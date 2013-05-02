@@ -255,7 +255,7 @@
   },
   "RSpec": {
     "coverage": {
-      "/Users/jhosteny/src/base_app/app/models/user.rb": [
+      "/Users/joscas/projects2/base_app/app/models/user.rb": [
         1,
         null,
         null,
@@ -287,17 +287,17 @@
         null,
         null
       ],
-      "/Users/jhosteny/src/base_app/app/controllers/application_controller.rb": [
+      "/Users/joscas/projects2/base_app/app/controllers/application_controller.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/jhosteny/src/base_app/app/helpers/application_helper.rb": [
+      "/Users/joscas/projects2/base_app/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/jhosteny/src/base_app/app/helpers/auth_helper.rb": [
+      "/Users/joscas/projects2/base_app/app/helpers/auth_helper.rb": [
         1,
         null,
         1,
@@ -315,7 +315,7 @@
         null,
         null
       ],
-      "/Users/jhosteny/src/base_app/app/controllers/omniauth_callbacks_controller.rb": [
+      "/Users/joscas/projects2/base_app/app/controllers/omniauth_callbacks_controller.rb": [
         1,
         1,
         4,
@@ -339,7 +339,7 @@
         null,
         null
       ],
-      "/Users/jhosteny/src/base_app/app/controllers/registrations_controller.rb": [
+      "/Users/joscas/projects2/base_app/app/controllers/registrations_controller.rb": [
         1,
         1,
         null,
@@ -374,7 +374,7 @@
         null,
         null
       ],
-      "/Users/jhosteny/src/base_app/app/controllers/sessions_controller.rb": [
+      "/Users/joscas/projects2/base_app/app/controllers/sessions_controller.rb": [
         1,
         null,
         1,
@@ -446,7 +446,7 @@
         null,
         null
       ],
-      "/Users/jhosteny/src/base_app/app/controllers/users_controller.rb": [
+      "/Users/joscas/projects2/base_app/app/controllers/users_controller.rb": [
         1,
         1,
         1,
@@ -461,17 +461,17 @@
         null,
         null
       ],
-      "/Users/jhosteny/src/base_app/app/serializers/user_serializer.rb": [
+      "/Users/joscas/projects2/base_app/app/serializers/user_serializer.rb": [
         1,
         1,
         null
       ]
     },
-    "timestamp": 1366818479
+    "timestamp": 1367533534
   },
   "Cucumber Features": {
     "coverage": {
-      "/Users/jhosteny/src/base_app/app/models/user.rb": [
+      "/Users/joscas/projects2/base_app/app/models/user.rb": [
         1,
         null,
         null,
@@ -503,59 +503,59 @@
         null,
         null
       ],
-      "/Users/jhosteny/src/base_app/app/controllers/application_controller.rb": [
+      "/Users/joscas/projects2/base_app/app/controllers/application_controller.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/jhosteny/src/base_app/app/helpers/application_helper.rb": [
+      "/Users/joscas/projects2/base_app/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/jhosteny/src/base_app/app/helpers/auth_helper.rb": [
+      "/Users/joscas/projects2/base_app/app/helpers/auth_helper.rb": [
         1,
         null,
         1,
-        8,
+        10,
         0,
         null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/jhosteny/src/base_app/app/controllers/omniauth_callbacks_controller.rb": [
-        1,
-        1,
-        0,
         null,
         null,
         1,
         0,
-        null,
-        null,
-        1,
-        0,
-        null,
         0,
         0,
         null,
-        null,
-        0,
-        null,
-        0,
         null,
         null,
         null
       ],
-      "/Users/jhosteny/src/base_app/app/controllers/registrations_controller.rb": [
+      "/Users/joscas/projects2/base_app/app/controllers/omniauth_callbacks_controller.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/joscas/projects2/base_app/app/controllers/registrations_controller.rb": [
         1,
         1,
         null,
@@ -590,32 +590,32 @@
         null,
         null
       ],
-      "/Users/jhosteny/src/base_app/app/controllers/sessions_controller.rb": [
+      "/Users/joscas/projects2/base_app/app/controllers/sessions_controller.rb": [
         1,
         null,
         1,
-        13,
-        10,
+        15,
+        11,
         null,
-        2,
+        3,
         null,
         1,
         null,
         0,
         null,
         null,
-        13,
+        15,
         null,
-        12,
-        12,
+        14,
+        14,
         null,
         null,
         null,
-        12,
-        2,
-        2,
+        14,
+        3,
+        3,
         null,
-        12,
+        14,
         null,
         null,
         1,
@@ -641,28 +641,28 @@
         null,
         null,
         1,
-        2,
-        2,
+        3,
+        3,
         null,
         null,
         1,
-        2,
-        2,
-        2,
+        3,
+        3,
+        3,
         null,
         null,
         1,
+        11,
+        11,
         10,
         10,
-        9,
-        9,
         null,
         null,
         null,
         null,
         null
       ],
-      "/Users/jhosteny/src/base_app/app/controllers/users_controller.rb": [
+      "/Users/joscas/projects2/base_app/app/controllers/users_controller.rb": [
         1,
         1,
         1,
@@ -673,16 +673,16 @@
         null,
         null,
         1,
-        8,
+        10,
         null,
         null
       ],
-      "/Users/jhosteny/src/base_app/app/serializers/user_serializer.rb": [
+      "/Users/joscas/projects2/base_app/app/serializers/user_serializer.rb": [
         1,
         1,
         null
       ]
     },
-    "timestamp": 1366818586
+    "timestamp": 1367533585
   }
 }
