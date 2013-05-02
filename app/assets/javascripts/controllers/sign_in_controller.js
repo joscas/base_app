@@ -1,4 +1,4 @@
-BaseApp.SignInController = Em.ObjectController.extend(Auth.SignInController, {
+BaseApp.SignInController = Ember.Controller.extend({
   needs: ["users_edit"],
   
   email: null,
@@ -7,18 +7,19 @@ BaseApp.SignInController = Em.ObjectController.extend(Auth.SignInController, {
   loginError: false,
   loginResponse: "",
   signIn: function() {
-    this.registerRedirect();
-    Auth.signIn({
-      email: this.get('email'),
-      password: this.get('password'),
-      remember: this.get('remember')
+    BaseApp.Auth.signIn({
+      data: {
+        'email': this.get('email'),
+        'password': this.get('password'),
+        'remember': this.get('remember')
+      }
     });
     var self = this;
-    Auth.on('signInError', function() {
+    BaseApp.Auth.on('signInError', function() {
       self.set('loginError', true);
-      self.set('loginResponse', Auth.get('jqxhr').statusText);
+      self.set('loginResponse', BaseApp.Auth.get('jqxhr').statusText);
     });
-    Auth.on('signInSuccess', function() {
+    BaseApp.Auth.on('signInSuccess', function() {
       self.set('loginError', false);
     });
   },
