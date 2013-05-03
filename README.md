@@ -14,7 +14,7 @@ Master branch is based on MongoDB + Mongoid. For ActiveRecord support use the [a
 Heroku deploy with the latest build: <a href="https://starter-app.herokuapp.com" target="_blank">https://starter-app.herokuapp.com</a>
 
 
-![Login tab](http://joscas.github.com/base_app/starter_app_sign_in.png)
+![Edit User tab](http://joscas.github.com/base_app/desktop_edit_user.png)
 
 ## Configure
 
@@ -37,6 +37,8 @@ development:
 ## Exporting as a mobile App
 
 This application is designed to work both as a desktop application and as a mobile App. Minimal adjustments have been included in the code to make it exportable with Phonegap. Those places where code has been added for mobile compatibility are clearly marked with comments.
+
+![Android Login](http://joscas.github.com/base_app/android_login.png)
 
 The quickest way to export the project for Phonegap is to use the `phonegap-rails` gem. For example, exporting to Android:
 
