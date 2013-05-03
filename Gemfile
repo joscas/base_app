@@ -68,4 +68,3 @@ gem 'figaro'
 # Mobile related gems
 gem 'rack-cors', :require => 'rack/cors'
 gem 'phonegap-rails'
-#gem 'phonegap-rails', path: '~/projects2/phonegap-rails'
