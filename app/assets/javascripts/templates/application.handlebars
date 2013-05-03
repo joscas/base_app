@@ -13,15 +13,15 @@
             <div class="nav-collapse in collapse" style="height: auto;">
                 <ul class='nav pull-left'>
 									<li {{bindAttr class="activeHome:active"}}>{{#linkTo "home"}}Home{{/linkTo}}</li>
-									{{#if Auth.authToken}}
-										{{#if Auth.currentUser.admin}}
+									{{#if BaseApp.Auth.signedIn}}
+										{{#if BaseApp.Auth.user.admin}}
 											<li {{bindAttr class="activeUsers:active"}}>{{#linkTo "users.index"}}Users{{/linkTo}}</li>
 										{{/if}}
 									{{/if}}
 								</ul>
 								<ul class='nav pull-right'>
-									{{#if Auth.authToken}}
-										<li>{{#linkTo "users.show" Auth.currentUser}}{{Auth.currentUser.name}}{{/linkTo}}</li>
+									{{#if BaseApp.Auth.signedIn}}
+										<li {{bindAttr class="activeUser:active"}}>{{#linkTo "users.show" BaseApp.Auth.user}}{{BaseApp.Auth.user.name}}{{/linkTo}}</li>
 								  	<li {{bindAttr class="activeSignOut:active"}}><a  href="#" {{action "signOut"}}>Sign Out</a></li>
 									{{else}}
 								  	<li {{bindAttr class="activeSignIn:active"}}>{{#linkTo "sign_in"}}Sign In{{/linkTo}}</li>

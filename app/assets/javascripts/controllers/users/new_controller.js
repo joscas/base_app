@@ -22,9 +22,11 @@ BaseApp.UsersNewController = Ember.ObjectController.extend({
     // when creating new records, it's necessary to wait for the record to be assigned
     // an id before we can transition to its route (which depends on its id)
     if (this.get('content.id')) {
-      Auth.signIn({
-        email: this.get('email'),
-        password: this.get('password')
+      BaseApp.Auth.signIn({
+        data: {
+          'email': this.get('email'),
+          'password': this.get('password'),
+        }
       });
       this.content.set('validationError',false);
       this.content.set('validationErrors',{});
