@@ -38,7 +38,7 @@ development:
 
 This application is designed to work both as a desktop application and as a mobile App. Minimal adjustments have been included in the code to make it exportable with Phonegap. Those places where code has been added for mobile compatibility are clearly marked with comments.
 
-[Android Login](http://joscas.github.com/base_app/android_login_1.png)
+![Android Login](http://joscas.github.com/base_app/android_login_1.png)
 
 The quickest way to export the project for Phonegap is to use the `phonegap-rails` gem. For example, exporting to Android:
 
