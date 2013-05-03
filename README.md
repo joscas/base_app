@@ -4,7 +4,7 @@
 [![Dependency Status](https://gemnasium.com/joscas/base_app.png)](https://gemnasium.com/joscas/base_app)
 
 ## Purpose
-This application is intended to serve as a starting point for single page web applications with a rails backend.
+This application is intended to serve as a starting point for single page web applications with a rails backend. The application is mobile compatible (see exporting as a mobile App).
 It provides generic user registration with Ember.js and Ember-auth. Backend is implemented with Ruby on Rails and Devise. OAuth with different strategies is included.
 
 Master branch is based on MongoDB + Mongoid. For ActiveRecord support use the [active_record](https://github.com/joscas/base_app/tree/active_record "ActiveRecord supported") branch. 
@@ -33,6 +33,35 @@ development:
   LINKEDIN_API_KEY:           i8w41p4343ecr2z
   LINKEDIN_SECRET_KEY:        I4eEAdsafBbsdfdfd9o4WD
 ```
+
+## Exporting as a mobile App
+
+This application is designed to work both as a desktop application and as a mobile App. Minimal adjustments have been included in the code to make it exportable with Phonegap. Those places where code has been added for mobile compatibility are clearly marked with comments.
+
+The quickest way to export the project for Phonegap is to use the `phonegap-rails` gem. For example, exporting to Android:
+
+1. Make sure you have dependencies installed for the mobile planform(s) targeted as specified in [phonegap-rails](https://github.com/joscas/phonegap-rails)
+
+2. Create config file `rails g phonegap_rails:install`
+
+3. Edit your `config/phonegap_rails.yml`file and specify your API server. For example:
+
+```yaml
+##
+##  General settings
+##
+phonegap_path:             '~/Development/phonegap-2.6.0'
+api_server:                'https://starter-app-staging.herokuapp.com'
+
+##  Android settings
+android:
+   package:                'com.josepcasals.test'
+```
+
+4. Connect you phone to your computer via USB
+
+5. Export, build and run: `rake phonegap:rails:android:initall`
+
 
 ## Contributing
 Contributions are very much welcome

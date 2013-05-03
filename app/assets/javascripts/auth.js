@@ -1,4 +1,4 @@
-BaseApp.Auth = Ember.Auth.create({
+var auth_data = {
   modules: ['emberData',
             'rememberable',
             'authRedirectable',
@@ -25,4 +25,12 @@ BaseApp.Auth = Ember.Auth.create({
   urlAuthenticatable: {
     paramsKey: 'auth'
   }
-});
+};
+
+// For mobile apps an API server is needed
+if (typeof API_SERVER != 'undefined' && API_SERVER != "") {
+  auth_data['baseUrl'] = API_SERVER; // API_SERVER is a global var defined by phonegap_rails.yml
+};
+
+// Initialize ember-auth
+BaseApp.Auth = Ember.Auth.create(auth_data);

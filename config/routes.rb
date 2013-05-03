@@ -11,8 +11,8 @@ BaseApp::Application.routes.draw do
     post "/users", :to => "registrations#create"
   end
   
-  resources :users, only: [:index, :show]
-  #resources :users, only: [:index, :show], :constraints => OnlyAjaxRequest.new
+  #resources :users, only: [:index, :show]
+  resources :users, only: [:index, :show], :constraints => OnlyAjaxRequest.new
   root :to => 'application#index'
   match "/*path" => "application#index"
 
