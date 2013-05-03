@@ -3,7 +3,7 @@
 [![Coverage Status](https://coveralls.io/repos/joscas/base_app/badge.png?branch=master)](https://coveralls.io/r/joscas/base_app)
 [![Dependency Status](https://gemnasium.com/joscas/base_app.png)](https://gemnasium.com/joscas/base_app)
 
-### (Note: Check the [devel](https://github.com/joscas/base_app/tree/devel "Mobile Phonegap export example") branch for a mobile exportable example)
+### (Note: Check the **[devel](https://github.com/joscas/base_app/tree/devel "Mobile Phonegap export example")** branch for a mobile exportable example)
 
 ## Purpose
 This application is intended to serve as a starting point for single page web applications with a rails backend.
