@@ -28,6 +28,7 @@ BaseApp.Oauth = Em.View.extend({
           var token = tokenMatch.exec(url)[1];
           BaseApp.Auth.signIn({data: {auth_token: token, remember: true}});
           BaseApp.Auth.on('signInError', function() {alert(BaseApp.Auth.get('jqxhr').statusText)});
+          BaseApp.Auth.on('signInSuccess', function() {alert(BaseApp.Auth.get('userId'))});
         }
       }
       self = this;

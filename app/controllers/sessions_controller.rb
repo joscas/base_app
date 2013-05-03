@@ -1,5 +1,5 @@
 class SessionsController < Devise::SessionsController
-skip_before_filter :require_no_authentication
+skip_before_filter :require_no_authentication #Needed for standalone Mobile apps
 
   def create
     if params[:email] && params[:password]
