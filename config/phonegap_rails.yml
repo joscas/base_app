@@ -1,0 +1,9 @@
+##
+##  General settings
+##
+phonegap_path:             '~/Development/phonegap-2.6.0'
+api_server:                'https://starter-app-staging.herokuapp.com'
+
+##  Android settings
+android:
+   package:                'com.josepcasals.test'
